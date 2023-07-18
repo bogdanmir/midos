@@ -1,0 +1,144 @@
+											// About page
+.second_nav {
+    padding: 13px 0 9px;
+    margin-top: 77px;
+}
+.list > li{ 
+			&:after {
+			    margin: 0 21px;
+			}
+			a {
+			    color: #fff;
+			    text-transform: uppercase;
+			    font-size: 19px;
+			    letter-spacing: -0.2px;
+			    font-family: "Helvetica Neue LT Condensed";
+			    font-family: "Fb Practica Narrow";
+			}
+}
+.partners {
+	.partners-wrap {
+	    padding-left: 10px;
+	}
+	.title_column {
+		border-right: 0;
+		border-left: 1px solid #fff;
+		padding-left: 68px;
+		padding-top: 134px;
+		text-align: left;
+		max-width: none;
+	}
+}
+.title_column .section_title {
+    letter-spacing: -2.5px;
+}
+.img_column .list_images {
+    padding: 179px 27px 50px 170px;
+    .logo-container {
+	    align-items: center;
+	}
+}
+.team-box {
+    padding-left: 0;
+}
+.team-section{
+	.section_title{
+		margin-bottom: 90px;
+	}
+	.sub-title{
+		font-size: 50px;
+		letter-spacing: -2px;
+	}
+	.max-title {
+	    text-align: left;
+	    padding: 68px 0 0 48px;
+	    border-right: 0;
+	    border-left: 1px solid #262626;
+	}
+}
+.team-box .user-box .user-info {
+    margin-right: 0;
+    margin-left: 0;
+}
+.team-box .descriptionmenu .user-descript {
+    padding: 12px 21px 20px 8px;
+}
+.team-section .next-row .max-title {
+    padding: 225px 0 0 48px;
+}
+.company-section {
+	.text_column {
+	    border-left: 0;
+	    border-right: 1px solid #262626;
+	    padding: 0 68px 58px 120px;
+	}
+	.title_column{
+		.section_title {
+		    text-align: left;
+			padding-right: 0;
+		}
+	}
+}
+
+.about .gray-box .title_column{
+	justify-content: flex-end;
+}
+.about .gray-box.right-content .title_column{
+	justify-content: flex-start;
+}
+.about .gray-box .text_column {
+    border-right: 1px solid #fff;
+}
+.about .gray-box .text_column .content {
+    letter-spacing: 0.8px;
+}
+.reverse{
+	flex-direction: row-reverse;
+}
+.company-section .text_column .title-text {
+    font-size: 44px;
+}
+.company-section .text_column .content {
+    font-size: 26px;
+    line-height: 1;
+}
+
+@media (max-width: 1100px){
+	.img_column .list_images {
+	    padding: 179px 27px 50px 0;
+	}
+}
+@media (max-width: 1100px){
+	.second_nav {
+	    margin-top: 68px;
+	}
+}
+@media (max-width: 1199px){
+	.team-section .next-row .max-title {
+	    padding: 225px 0 0 15px;
+	}
+}
+@media (max-width: 991px){
+	.team-section .next-row .max-title {
+	    padding: 0;
+	}
+	.team-section .max-title {
+	    max-width: 100%;
+	    text-align: center;
+	    margin: 0;
+	    padding: 0;
+	    border-right: 0;
+	}
+	.company-section .text_column {
+	    border: 0;
+	}
+	.list {
+	    padding-right: 0;
+	}
+}
+@media (max-width: 575px){
+	
+}
+@media (max-width: 450px){
+	
+}
