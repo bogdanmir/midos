@@ -3427,7 +3427,9 @@ a.text-gray-dark:hover {
     display: block;
     position: relative;
     margin-bottom: 63px;
-    margin-left: 71px;
+    /* margin-left: 71px; */
+    display: flex;
+    align-items: center;
 }
 .map-description .loc-pin {
     background: url("../img/location-pin.png") no-repeat;
@@ -3437,9 +3439,9 @@ a.text-gray-dark:hover {
     min-width: 32px;
     vertical-align: middle;
     margin-right: 35px;
-    position: absolute;
+    /* position: absolute;
     left: -67px;
-    top: 0;
+    top: 0; */
 }
 .map-description .tel-pin {
     background: url("../img/phone-receiver.png") no-repeat;
@@ -3449,9 +3451,9 @@ a.text-gray-dark:hover {
     min-width: 32px;
     vertical-align: middle;
     margin-right: 35px;
-    position: absolute;
+    /* position: absolute;
     left: -67px;
-    top: 7px;
+    top: 7px; */
 }
 .map-description .email-pin {
     background: url("../img/mail-pin.png") no-repeat;
@@ -3461,9 +3463,9 @@ a.text-gray-dark:hover {
     display: inline-block;
     vertical-align: middle;
     margin-right: 27px;
-    position: absolute;
+    /* position: absolute;
     left: -67px;
-    top: 0;
+    top: 0; */
 }
 
 .full-section-map {
@@ -3683,7 +3685,8 @@ a.text-gray-dark:hover {
     .map-description .loc-pin,
     .map-description .tel-pin,
     .map-description .email-pin {
-        left: -50px;
+        /* left: -50px; */
+        margin-right: 20px;
     }
 }
 
@@ -4641,8 +4644,18 @@ a {
     max-width: 1780px;
     background-color: transparent;
 }
+.wrap-img.white-logo {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrap-img.white-logo img {
+    max-width: 250px;
+}
 .press-item .wrap-img {
     text-align: right;
+    padding: 0;
 }
 .press-item:hover,
 .press-item:focus,
@@ -4852,6 +4865,7 @@ body {
     background-size: cover;
     position: relative;
     background-position: 50%;
+    overflow-x: hidden;
 }
 
 /* .touchevents .bg_fixed {
@@ -6379,7 +6393,10 @@ body {
     padding-right: 55px;
     padding-top: 30px;
 }
-
+.swiper-wrapper .swiper-slide img {
+    object-fit: cover;
+    width: 100%;
+}
 .dev_progect_swiper {
     position: relative;
     overflow: hidden;

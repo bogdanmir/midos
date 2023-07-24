@@ -108,10 +108,10 @@ $( document ).ready(function () {
 			var winHeight = $(window).height();
 			var scrollTop = $(window).scrollTop();
 			if (scrollTop>300) {
-				console.log("300")
+				// console.log("300")
 				$('.no-touchevents .home_header img').show("slow");
 			}else if (scrollTop<300) {
-				console.log("300")
+				// console.log("300")
 				$('.no-touchevents .home_header img').hide("slow");
 			}
 			$(window).scroll(function() {
