@@ -5385,6 +5385,35 @@ body {
     align-items: flex-end;
 }
 
+.company_details.logos_details img {
+    max-width: 100%;
+}
+
+.company_details.logos_details .details_row {
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .company_details.logos_details img.fox-logo {
+        max-width: 100px;
+    }
+    .company_details.logos_details .details_row {
+        padding: 25px 25px;
+    }
+}
+@media (min-width: 1401px) {
+    .company_details.logos_details .details_title {
+        font-size: 48px;
+    }
+    .company_details.logos_details img.fox-logo {
+        max-width: 125px;
+    }
+    .company_details.logos_details .detail_item img {
+        max-height: 60px;
+    }
+}
+
 .touchevents .company_details {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -5399,6 +5428,7 @@ body {
     background-color: #000000;
     padding: 10px;
     width: 100%;
+    opacity: 0.8;
 }
 
 .details_row {
@@ -6661,3 +6691,228 @@ body {
     max-width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
+
+
+.usps-container {
+    font-size: 1.75rem;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1.5em;
+    color: #fff;
+    margin-top: 16%;
+    margin-right: 10%;
+    margin-left: auto;
+    max-width: 650px;
+    text-shadow: 0 0 10px #0e2631;
+    padding: 0 50px;
+}
+.usps-container .usp {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    transition: ease-in-out .5s;
+    transform: translateY(calc(-100% - 0.75em));
+    font-size: 1.1rem;
+}
+.usps-container .title-group {
+    font-size: 56px;
+    /* font-family: "AirbnbCereal_W_Md"; */
+}
+.usps-container .btn {
+    color: #fff;
+    background: transparent;
+    border: solid 2px #f05a24;
+    display: inline-block;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    line-height: 1;
+    padding: 1.5em 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: .25s;
+}
+.usps-container .btn:hover {
+    transform: scale(1.05);
+    color: #f05a24;
+}
+.fade--0 {
+    animation-name: fade--0;
+}
+.fade--1 {
+    animation-name: fade--1;
+}
+.fade--2 {
+    animation-name: fade--2;
+}
+.fade--3 {
+    animation-name: fade--3;
+}
+.fade--4 {
+    animation-name: fade--4;
+}
+.fade--5 {
+    animation-name: fade--5;
+}
+.fade--6 {
+    animation-name: fade--6;
+}
+.fade {
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: linear;
+}
+
+@keyframes fade--0 {
+    0% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    10% {
+      opacity: 1;
+    }
+    14.2% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fade--1 {
+    14.2% {
+      opacity: 0;
+    }
+    19% {
+      opacity: 1;
+    }
+    24% {
+      opacity: 1;
+    }
+    28.4% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fade--2 {
+    28.4% {
+      opacity: 0;
+    }
+    33.4% {
+      opacity: 1;
+    }
+    38.4% {
+      opacity: 1;
+    }
+    42.6% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fade--3 {
+    42.6% {
+      opacity: 0;
+    }
+    47.6% {
+      opacity: 1;
+    }
+    52.6% {
+      opacity: 1;
+    }
+    56.8% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fade--4 {
+    56.8% {
+      opacity: 0;
+    }
+    61.8% {
+      opacity: 1;
+    }
+    66.8% {
+      opacity: 1;
+    }
+    71% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fade--5 {
+    71% {
+      opacity: 0;
+    }
+    76% {
+      opacity: 1;
+    }
+    81% {
+      opacity: 1;
+    }
+    85.2% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fade--6 {
+    85.2% {
+      opacity: 0;
+    }
+    90.2% {
+      opacity: 1;
+    }
+    95.2% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @media (max-width: 1400px) {
+    .usps-container .title-group {
+        font-size: 48px;
+    }
+}
+@media (max-width: 1100px) {
+    .usps-container .title-group {
+        font-size: 44px;
+    }
+}
+@media (max-width: 991px) {
+    .usps-container .title-group {
+        font-size: 32px;
+        max-width: 300px;
+        margin: 0 auto 0.5rem;
+    }
+    .first_home {
+        flex-direction: column;
+        min-height: 85vh!important;
+    }
+    .no-touchevents .first_home {
+        flex-direction: column;
+        align-items: center;
+    }
+    .usps-container {
+        display: block;
+        font-size: 1rem;
+        margin: auto;
+        order: 1;
+        margin-top: 25vh;
+        padding: 0;
+    }
+    .usps-container .usp {
+        font-size: 1.25rem;
+    }
+    .usps-container .btn {
+        font-size: 0.75rem;
+        margin-top: 0.5rem;
+    }
+}
