@@ -1,15 +1,15 @@
 $(document).on( 'click', '.marker_box', function () {
-		$('.wrap_marker').removeClass('show_info');
-		$(this).closest('.wrap_marker').addClass('show_info');
-	})
-	//click everywhere on screen should close it
-	$(document).click(function (e) {  
-		if ($(e.target).closest('.wrap_marker').length == 0) {   
-			$('.wrap_marker').removeClass('show_info');  
-		} 
-	});
+	$('.wrap_marker').removeClass('show_info');
+	$(this).closest('.wrap_marker').addClass('show_info');
+})
+//click everywhere on screen should close it
+$(document).click(function (e) {  
+	if ($(e.target).closest('.wrap_marker').length == 0) {   
+		$('.wrap_marker').removeClass('show_info');  
+	} 
+});
 
-
+$( document ).ready(function () {
 	google.maps.event.addDomListener(window, 'load', initialize);
 	function CustomMarker(latlng,  map, content, head, link) {
 		this.latlng_ = latlng;
@@ -82,12 +82,6 @@ $(document).on( 'click', '.marker_box', function () {
 						{ color: "#333333" },
 					]
 				},
-				{ 
-					featureType : "road",
-					stylers: [
-						{ color: "#746b6b" },
-					]
-				},
 				{
 					elementType: "labels",
 					stylers: [
@@ -112,7 +106,10 @@ $(document).on( 'click', '.marker_box', function () {
 					featureType: "road",
 					elementType: "labels",
 					stylers: [
-						{ visibility: "off" }
+						{
+							visibility: "off",
+							color: "#746b6b"
+						}
 					]
 				}
 			]
@@ -152,3 +149,5 @@ $(document).on( 'click', '.marker_box', function () {
 			var overlay = new CustomMarker(new google.maps.LatLng(place_details[1], place_details[2]), map, place_details[0], place_details[3], place_details[4]);
 		}
 	}
+
+});
