@@ -17,7 +17,7 @@ $( document ).ready(function () {
 		}
 	};
 
-// for animation homepage
+	// for animation homepage
 	function ofFset(section) {
 		var posElem = section.offset();
 		var windowsHeight = $(window).height()
@@ -65,8 +65,7 @@ $( document ).ready(function () {
 			// elem.css( "opacity", "0.8");
 		}
 	}
-
-// END for animation homepage
+	// END for animation homepage
 
 	if (Modernizr.touchevents) {
 		windowsMinHeight();
@@ -85,7 +84,6 @@ $( document ).ready(function () {
 		}, 2000);
 		// ENDfor animation homepage first&second section
 	} else {
-
 		if( $("*").is(".forAnimation") ) {
 			varAnimate();
 			$(window).resize(function() {
@@ -129,7 +127,7 @@ $( document ).ready(function () {
 		}
 	};
 
-// for developments page
+	// for developments page
 	if (Modernizr.touchevents) {
 		$(".item_slider").on("click", function(){
 			$(this).toggleClass("opened");
@@ -285,7 +283,7 @@ $( document ).ready(function () {
 		}
 
 
-//for about page
+	//for about page
 	//custom Scrollbar
 	// $(window).on("load",function(){
 	//     $(".content-scroll").mCustomScrollbar();
@@ -305,50 +303,45 @@ $( document ).ready(function () {
 	});
 
 
-var mobileLogoPlayInt = null;
-function mobileLogoPlay() { 
-	if (window.matchMedia('(max-width: 992px)').matches) {  
-		$('.partners-logo').removeClass('active-img');  
-		$('.partners-logo').first().addClass('active-img');  
-		clearInterval(mobileLogoPlayInt);  
-		mobileLogoPlayInt = setInterval(function(){   
-			var selectedItem = $('.logo-container').find('.active-img');   
-			$('.partners-logo').removeClass('active-img');   
-			selectedItem.next().addClass('active-img');   
-			if($('.partners-logo').last().hasClass('active-img')){    
-				setTimeout(function(){     
-					$('.partners-logo').first().addClass('active-img');    
-				},2000);   
-			}  
-		},2000); 
-	}else{  
-		$('.partners-logo').removeClass('active-img'); 
+	var mobileLogoPlayInt = null;
+	function mobileLogoPlay() { 
+		if (window.matchMedia('(max-width: 992px)').matches) {  
+			$('.partners-logo').removeClass('active-img');  
+			$('.partners-logo').first().addClass('active-img');  
+			clearInterval(mobileLogoPlayInt);  
+			mobileLogoPlayInt = setInterval(function(){   
+				var selectedItem = $('.logo-container').find('.active-img');   
+				$('.partners-logo').removeClass('active-img');   
+				selectedItem.next().addClass('active-img');   
+				if($('.partners-logo').last().hasClass('active-img')){    
+					setTimeout(function(){     
+						$('.partners-logo').first().addClass('active-img');    
+					},2000);   
+				}  
+			},2000); 
+		}else{  
+			$('.partners-logo').removeClass('active-img'); 
+		};
 	};
-};
-mobileLogoPlay();
-
-$(window).resize(function(){ 
 	mobileLogoPlay();
-});
 
+	$(window).resize(function(){ 
+		mobileLogoPlay();
+	});
 
-
-
-//for Malls page
-if( $("*").is(".malls-slider-box") ) {
-	var mySwiper = new Swiper('.malls-slider-box', {
-		direction: 'horizontal',
-		mousewheelControl: false,
-		keyboardControl: true,
-		speed: 800,
-		paginationClickable: true,
-	    pagination: '.malls-swiper-pagination',
-	    nextButton: '.swiper-button-next',    
-	    prevButton: '.swiper-button-prev'
-	}); 
-}
-
-
+	//for Malls page
+	if( $("*").is(".malls-slider-box") ) {
+		var mySwiper = new Swiper('.malls-slider-box', {
+			direction: 'horizontal',
+			mousewheelControl: false,
+			keyboardControl: true,
+			speed: 800,
+			paginationClickable: true,
+			pagination: '.malls-swiper-pagination',
+			nextButton: '.swiper-button-next',    
+			prevButton: '.swiper-button-prev'
+		}); 
+	}
 
 	//prev pagination
 	$(".swiper-button-prev").on('mouseover', function() {
@@ -364,12 +357,12 @@ if( $("*").is(".malls-slider-box") ) {
 				$(".malls-swiper-pagination").removeClass('reset-left-pagination');
 				$(".swiper-button-prev").removeClass('color-arrow');
 			})
-		})
-		.on('mouseout', function() {
-		    $(".malls-swiper-pagination").removeClass('reset-left-pagination');
-		    $(this).removeClass('color-arrow');
-		});
-	 //next pagination
+	})
+	.on('mouseout', function() {
+		$(".malls-swiper-pagination").removeClass('reset-left-pagination');
+		$(this).removeClass('color-arrow');
+	});
+	//next pagination
 	$(".swiper-button-next").on('mouseover', function() {
 	    $(".malls-swiper-pagination").addClass('reset-right-pagination');
 		$(this).addClass('color-arrow');
@@ -392,7 +385,6 @@ if( $("*").is(".malls-slider-box") ) {
 		// },300);
 	});
 
- 
 	function mobileShMarkerGlow () {
 		if (window.matchMedia('(max-width: 992px)').matches) {
 			$('.marker_box').addClass('active-glow');
@@ -412,3 +404,115 @@ if( $("*").is(".malls-slider-box") ) {
 	});
 
 });
+
+
+// modal validation
+$(".validateJs").each(function () {
+    $(this).validate({
+        rules: {
+            required: "required",
+            email: {
+                required: true,
+                email: true,
+            },
+            firstName: {
+                required: true,
+            },
+            lastName: {
+                required: true,
+            },
+            phone: {
+                required: true,
+                phoneno: true,
+            },
+            select: {
+                required: true,
+                valueNotEquals: "default",
+            },
+            select_tax: {
+                required: true,
+                valueNotEquals: "default",
+            },
+            select_about_us: {
+                required: true,
+                valueNotEquals: "default",
+            },
+            optional: {
+                required: false,
+            },
+        },
+        messages: {
+            required: "This field is required",
+            email: "Please enter a valid email address",
+            firstName: "Please enter a valid first name",
+            lastName: "Please enter a valid last name",
+            phone: "Please enter a valid phone",
+            select: {
+                valueNotEquals: "Please select an item",
+            },
+            select_tax: {
+                valueNotEquals: "Please select an item",
+            },
+            select_about_us: {
+                valueNotEquals: "Please select an item",
+            },
+        },
+        submitHandler: function (form) {},
+    });
+});
+//rule for phone number
+$.validator.addMethod(
+    "phoneno",
+    function (value, element) {
+        return (
+            value.match(/^\+(?:[0-9] ?){6,14}[0-9]$/) ||
+            value.match(/^(?:[0-9] ?){6,14}[0-9]$/)
+        );
+    },
+    "Enter Valid  phone number"
+);
+//rule for select
+$.validator.addMethod(
+    "valueNotEquals",
+    function (value, element, arg) {
+        return arg !== value;
+    },
+    "Value must not equal arg."
+);
+
+//
+$(document).ready(function () {
+    $("#ajax_form").submit(function () {
+        event.preventDefault();
+        sendAjaxForm();
+    });
+});
+
+function sendAjaxForm(result_form) {
+    $.ajax({
+        url: "php/feedback.php",
+        type: "POST",
+        dataType: "html",
+
+        data: $("#ajax_form").serialize(),
+
+        success: function (response) {
+            result = $.parseJSON(response);
+            console.log(result);
+
+            if (
+                response == "true" &&
+                $(".validateJs .form-control.error").length < 1
+            ) {
+                $(".contact-form").addClass("d-none");
+                $(".wrap-signup").addClass("d-block");
+            } else {
+                $(".contact-form").removeClass("d-none");
+                $(".wrap-signup").removeClass("d-block");
+            }
+        },
+        error: function (response) {
+            console.log(response);
+        },
+    });
+}

@@ -39,7 +39,7 @@
 					</li>
 					<li><a href="portfolio.html">Portfolio</a></li>
 					<li><a href="press.html">Press</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="contact.html" class="active">Contact</a></li>
 					<li><a href="investor-login.html">Investor login</a></li>
 				</ul>
 			</nav>
@@ -49,16 +49,133 @@
 	<!-- background-image for mobile -->
 		<div class="row"  style="background-image: url('img/contact_img1.jpg');">
 			<!-- background-image for desktop -->
-			<div class="col-xs-6 contact_col first min_100vh" style="background-image: url('img/contact_img2.jpg');">
+			<!-- <div class="col-xs-6 contact_col first min_100vh" style="background-image: url('img/contact_img2.jpg');">
 				<div class="contact_item">
 					<h2 class="name_office">Los Angeles Office</h2>
 					<p class="street">6350 Laurel Canyon Blvd <br>North Hollywood CA 91607</p>
 					<a href="tel:323-919-8761" class="contact_tel">323-919-8761</a>
 					<a href="mailto:unfo@midosdevelopment.com" class="contact_mail">Info@MidosDevelopment.com</a>
 				</div>
+			</div> -->
+			<div class="col-lg-5 contact_col first" style="background-image: url('img/contact_img2.jpg');">
+				<div class="contact_item">
+					<h2 class="name_office">Contact us to learn more</h2>
+
+					<p class="street">Los Angeles Office </br>6350 Laurel Canyon Blvd <br>North Hollywood CA 91607</p>
+					<a href="tel:323-919-8761" class="contact_tel">323-919-8761</a>
+					<a href="mailto:info@midosdevelopment.com" class="contact_mail">Info@MidosDevelopment.com</a>
+				</div>
 			</div>
 			<!-- background-image for desktop -->
-			<div class="col-xs-6 contact_col min_100vh" style="background-image: url('img/contact_img1.jpg');">
+			<div class="col-lg-7 contact_col" style="background-image: url('img/contact_img1.jpg');">
+				
+				<!-- <form class="contact-form jsFormEmail" action="" method="post"> -->
+				<form class="contact-form main-form validateJs" id="ajax_form" novalidate="novalidate" action="" method="post">
+
+
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<input type="text" name="firstName" class="form-control" id="firstName" required>
+							<label class="label-item required" for="firstName">First Name</label>
+						</div>
+						<div class="form-group col-md-6">
+							<input type="text" name="lastName" class="form-control" id="lastName" required>
+							<label class="label-item required" for="lastName">Last Name</label>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<input type="text" name="email" class="form-control" id="email" required>
+							<label class="label-item required" for="email">Email</label>
+						</div>
+						<div class="form-group col-md-6">
+							<input type="tel" name="phone" class="form-control" id="namePhone" required>
+							<label class="label-item required" for="namePhone">Phone number</label>
+						</div>
+					</div>
+					
+					<div class="form-row">
+						<div class="form-group col-md-12 select-wrapper">
+							<label class="select-label">Are you an accredited investor?<span class="hs-form-required">*</span></label>
+							<select name="select" class="form-control custom-select">
+								<option selected disabled>Please Select</option>
+								<option>Yes</option>
+								<option>No</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-12 select-wrapper">
+							<label class="select-label">
+								Do you file U.S. tax returns? (Personally or as an Entity)<span class="hs-form-required">*</span>
+							</label>
+							<select name="select_tax" class="form-control custom-select">
+								<option selected disabled>Please Select</option>
+								<option>Yes</option>
+								<option>No</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-12 select-wrapper">
+							<label class="select-label">How much are you looking to invest?</label>
+							<select name="select_invest" class="form-control custom-select">
+								<option selected disabled>Please Select</option>
+								<option>$25,000 - $49,999</option>
+								<option>$50,000 - $99,999</option>
+								<option>$100,000 - $249,999</option>
+								<option>$250,000 - $499,999</option>
+								<option>$500,000 - $999,999</option>
+								<option>$1,000,000 - $4,999,999</option>
+								<option>$5,000,000 - $19,999,999</option>
+								<option>$20,000,000+</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-12">
+							<textarea name="message_investment_goals" class="form-control" rows="3" placeholder="What are your investment goals?"></textarea>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-12 select-wrapper">
+							<label class="select-label">
+								How did you hear about us?
+								<span class="hs-form-required">*</span>
+							</label>
+							<select name="select_about_us" class="form-control custom-select">
+								<option selected disabled>Please Select</option>
+								<option>Facebook/Instagram</option>
+								<option>LinkedIn</option>
+								<option>Google (Search)</option>
+								<option>Other</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group group-btn">
+						<button type="submit" class="btn cta-btn form-btn">Get started</button>
+					</div>
+				</form>
+
+				<section class="wrap-signup">
+					<article class="wrap-inner mb-auto">
+						<div class="success-row">
+							<div class="wrap-check">
+								<i class="ico-check"></i>
+							</div>
+							<div class="wrap-text">
+								<h3 class="title-inner">Thank you! </br> We will reach out to you shortly.</h2>
+							</div>
+						</div>
+					</article>
+				</section>
+
 			</div>
 		</div>
 	</div>
@@ -69,7 +186,18 @@
 			<p class="copyright">Website Disclaimer: This web site does not constitute an offer to sell or a solicitation of an offer to buy an interest in any investment vehicle managed by MIDOS Development. The information set forth herein is preliminary, projected, based on assumptions regarding future events that may not occur and does not purport to be complete. Solicitations of offers to buy interests in MIDOS Development projects will be made only pursuant to MISON Development’s confidential private placement memorandum, which will contain a complete description of MIDOS Development, the risks inherent in an investment in a MIDOS Development project and investor eligibility standards, and which will qualify this web site in its entirety.</p>
 		</div>
 	</footer>
+	<svg style="display:none">
+		<symbol id="linkedin" viewBox="0 0 20 20">
+			<path d="M10 0.4c-5.302 0-9.6 4.298-9.6 9.6s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6-4.298-9.6-9.6-9.6zM7.65 13.979h-1.944v-6.256h1.944v6.256zM6.666 6.955c-0.614 
+				0-1.011-0.435-1.011-0.973 0-0.549 0.409-0.971 1.036-0.971s1.011 0.422 1.023 0.971c0 0.538-0.396 0.973-1.048 0.973zM14.75 13.979h-1.944v-3.467c0-0.807-0.282-1.355-0.985-1.355-0.537
+				0-0.856 0.371-0.997 0.728-0.052 0.127-0.065 0.307-0.065 0.486v3.607h-1.945v-4.26c0-0.781-0.025-1.434-0.051-1.996h1.689l0.089 0.869h0.039c0.256-0.408 0.883-1.010 1.932-1.010 1.279
+			  0 2.238 0.857 2.238 2.699v3.699z">
+			</path>
+		</symbol>
+	</svg>
 	<script src="lib/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
 	<script src="lib/tether.min.js"></script>
 	<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="lib/modernizr-touchevents.js"></script>
