@@ -4644,11 +4644,17 @@ a {
     max-width: 1780px;
     background-color: transparent;
 }
-.wrap-img.white-logo {
-    background-color: #000;
+.press-item .wrap-img{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.wrap-img.black-logo {
+    background-color: #fff;
+    border: 4px solid #000;
+}
+.wrap-img.white-logo {
+    background-color: #000;
 }
 .wrap-img.white-logo img {
     max-width: 250px;
@@ -4684,6 +4690,9 @@ a {
     text-align: left;
     padding-top: 38px;
     padding-left: 54px;
+    padding-bottom: 35px;
+    display: flex;
+    flex-direction: column;
 }
 .press-item .press-descript p {
     color: #232323;
@@ -4705,12 +4714,17 @@ a {
     font-size: 35px;
     color: #009edb;
     margin-bottom: 10px;
+    padding-top: 0;
+}
+.press-item .press-prop {
+    flex: 1;
 }
 
 @media (max-width: 1500px) {
     .press-item .press-descript {
         text-align: left;
         padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
